@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muthu Chitra U.S - Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    
+    /* Contact Section Styles */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .contact-info, .contact-form {
+      width: calc(50% - 15px);
+      background-color: #1e293b;
+      border-radius: 16px;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    
+    .contact-info h3 {
+      color: #60a5fa;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .contact-info p {
+      margin: 15px 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .contact-info p i {
+      margin-right: 15px;
+      color: #3b82f6;
+      font-size: 1.2rem;
+      width: 20px;
+      text-align: center;
+    }
+    
+    .social-links {
+      display: flex;
+      margin-top: 30px;
+    }
+    
+    .social-links a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #334155;
+      color: white;
+      border-radius: 50%;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: #3b82f6;
+      transform: translateY(-5px);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      background-color: #334155;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .send-btn {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .send-btn:hover {
+      background-color: #2563eb;
+    }
+
+    header {
+      background: #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      padding: 8px 0;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #3b82f6;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 5px;
+    }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(to right, #07142b, #1c1c1c);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    #home h2 {
+      margin-top: 10px;
+      color: #93c5fd;
+    }
+
+    #home p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+
+    #about {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+    }
+
+    #about p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .profile-pic {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    #about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .resume-btn {
+      background-color: #1e40af;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 30px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .resume-btn:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      color: #94a3b8;
+      font-size: 1.5rem;
+      margin: 0 15px;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: #3b82f6;
+      transform: scale(1.2);
+    }
+
+    #skills {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+    }
+
+    #skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #skills ul li {
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #334155;
+      border-radius: 30px;
+      transition: transform 0.3s, background-color 0.3s;
+      font-weight: 500;
+    }
+
+    #skills ul li:hover {
+      transform: scale(1.1);
+      background-color: #1e40af;
+    }
+
+    #projects {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+      padding-bottom: 80px;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      display: flex;
+      align-items: stretch;
+      background-color: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      height: 300px;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-img-container {
+      width: 50%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-img-container:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    .project-info {
+      width: 50%;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .project-info h3 {
+      margin: 0 0 15px;
+      font-size: 1.5rem;
+      color: #60a5fa;
+    }
+
+    .project-info p {
+      margin: 0 0 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .tech-stack span {
+      background-color: #334155;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .tech-stack span:hover {
+      background-color: #1e40af;
+      transform: scale(1.05);
+    }
+
+    /* Internship section */
+    #internship {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+    }
+
+    .internship-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .internship-card {
+      background-color: #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+      width: calc(33.333% - 20px);
+      min-width: 280px;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .internship-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .internship-card h3 {
+      color: #60a5fa;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .internship-card .company {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .internship-card .duration {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .internship-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .internship-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #3b82f6;
+      font-size: 1.5rem;
+    }
+
+    /* Achievements section */
+    #achievements {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background-color: #334155;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #3b82f6;
+      transform: scale(1.05);
+    }
+
+    .achievements-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .achievement-card {
+      background-color: #1e293b;
+      border-radius: 12px;
+      padding: 25px;
+      width: calc(33.333% - 20px);
+      min-width: 280px;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .achievement-card h3 {
+      color: #60a5fa;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .achievement-card .event {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .achievement-card .date {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .achievement-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .achievement-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #3b82f6;
+      font-size: 1.5rem;
+    }
+
+    .achievement-card.patent .achievement-icon {
+      color: #10b981;
+    }
+
+    .achievement-card.paper .achievement-icon {
+      color: #f59e0b;
+    }
+
+    .achievement-card.hackathon .achievement-icon {
+      color: #ef4444;
+    }
+
+    .achievement-card.sports .achievement-icon {
+      color: #8b5cf6;
+    }
+
+    #contact {
+      background: linear-gradient(to right, #060f1f, #1c1c1c);
+    }
+
+    footer {
+      background-color: #1e293b;
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #fff;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 3px;
+      background-color: #3b82f6;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .internship-card, .achievement-card {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+      
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
+      nav ul li {
+        margin: 10px 0;
+      }
+      
+      nav ul li a {
+        display: block;
+        padding: 10px;
+      }
+      
+      #home h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .project-card {
+        flex-direction: column;
+        height: auto;
+      }
+      
+      .project-img-container, .project-info {
+        width: 100%;
+      }
+      
+      .project-img-container {
+        height: 200px;
+      }
+      
+      .project-info {
+        padding: 20px;
+      }
+      
+      .tech-stack {
+        margin-top: 15px;
+      }
+      
+      .internship-card, .achievement-card {
+        width: 100%;
+      }
+      
+      .contact-info, .contact-form {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .profile-pic {
+        width: 200px;
+        height: 200px;
+      }
+      
+      #home h1 {
+        font-size: 1.75rem;
+      }
+      
+      #home h2 {
+        font-size: 1.25rem;
+      }
+      
+      #home p {
+        font-size: 1rem;
+      }
+      
+      .filter-buttons {
+        gap: 8px;
+      }
+      
+      .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <nav>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="navMenu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <img src="C:\Users\Muthuchithra\OneDrive\Pictures\muthuchitra_.jpg" alt="Muthu Chitra U.S" class="profile-pic">
+    <h1>Hi, I'm Muthu Chitra U.S</h1>
+    <h2><span id="typed-text">Data Enthusiast</span></h2>
+    <p>Welcome to my portfolio website! I'm a passionate and aspiring technologist with a strong desire to create innovative solutions and push the boundaries of technology. As a recent graduate, I am eager to start my career and contribute to exciting projects.</p>
+    <a href="D:\Muthuchitra_portfolio_newww\assest\Muthuchitra_resumeeeee (2).pdf" class="resume-btn" download>Download Resume</a>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/muthuchitra-umasangar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>Currently, I am pursuing my Bachelor's degree in Computer Science and Engineering. Proficient in Java with a continuous focus on advancing my comprehension of data structures and algorithms. Furthermore, I possess intermediate proficiency in front-end development and am dedicated to honing both my DSA proficiency and software development abilities. I actively seek out opportunities to expand my knowledge and skills, embracing new technologies and approaches. Feel free to explore my work and get in touch if you have any questions or opportunities to collaborate.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+<ul>
+  <li>Python</li>
+  <li>Java (Basics)</li>
+  <li>GitHub</li>
+  <li>Netlify</li>
+  <li>Figma</li>
+  <li>Linux</li>
+  <li>Jupyter Notebook</li>
+  <li>Power BI</li>
+  <li>Pandas</li>
+  <li>NumPy</li>
+  <li>Scikit-learn</li>
+  <li>TensorFlow</li>
+  <li>Keras</li>
+  <li>PyTorch</li>
+  <li>Matplotlib</li>
+  <li>Seaborn</li>
+  <li>Plotly</li>
+  <li>MySQL</li>
+  <li>MongoDB</li>
+</ul>
+
+    </ul>
+  </section>
+<!-- Projects Section -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-img-container">
+        <a href="https://github.com/Muthuchitra04/smart-agro-advisory" target="_blank">
+          <img src="D:\Muthuchitra_portfolio_newww\assest\Agricultural.jpg" alt="Smart Agro Advisory System" class="project-img" />
+        </a>
+      </div>
+      <div class="project-info">
+        <h3>Smart Agro Advisory System</h3>
+        <p>ML-based system for crop & fertilizer recommendation based on soil and climate data. The system analyzes various parameters to provide personalized farming advice.</p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>Machine Learning</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img-container">
+        <a href="https://github.com/Muthuchitra04/road-accident-analysis" target="_blank">
+          <img src="D:\Muthuchitra_portfolio_newww\assest\road_accident.jpg" alt="Road Accident Analysis" class="project-img" />
+        </a>
+      </div>
+      <div class="project-info">
+        <h3>Road Accident Analysis</h3>
+        <p>Data visualized in Power BI to identify accident-prone zones in Tamil Nadu. This analysis helps traffic authorities to improve road safety and reduce accidents.</p>
+        <div class="tech-stack">
+          <span>Power BI</span>
+          <span>Excel</span>
+          <span>Data Analytics</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img-container">
+        <a href="https://github.com/Muthuchitra04/Sentify_pro" target="_blank">
+          <img src="D:\Muthuchitra_portfolio_newww\assest\sentimental_analysis.png" alt="Sentify Pro – Advanced Sentiment Analysis Web Application" class="project-img" />
+        </a>
+      </div>
+      <div class="project-info">
+        <h3>Sentify Pro</h3>
+        <p>Sentify Pro is a Streamlit-based sentiment analysis app that classifies text as positive, negative, or neutral using NLTK, TextBlob, and VADER. It features interactive visualizations and provides real-time insights through a simple, user-friendly interface.</p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>NLTK</span>
+          <span>VADER</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img-container">
+        <a href="https://github.com/Muthuchitra04/HealthGuard" target="_blank">
+          <img src="D:\Muthuchitra_portfolio_newww\assest\health.jpg" alt="HealthGuard" class="project-img" />
+        </a>
+      </div>
+      <div class="project-info">
+        <h3>HealthGuard</h3>
+        <p>IoT-based system for real-time body temperature monitoring with alert triggers. This device helps in early detection of fever and continuous health monitoring.</p>
+        <div class="tech-stack">
+          <span>Arduino</span>
+          <span>MySQL</span>
+          <span>Embedded C</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Internship Section -->
+  <section id="internship">
+    <h2 class="section-title">Internship Experience</h2>
+    <div class="internship-container">
+      
+      <div class="internship-card">
+        <i class="fas fa-laptop-code internship-icon"></i>
+        <h3>FullStack Development</h3>
+        <div class="company">8Queen's software Technology pvt limited, Chennai</div>
+        <div class="duration">July 2023</div>
+        <p>Completed an internship at 8 queen's software technology ,I learned HTML, CSS, and JavaScript for frontend development. Gained foundational skills to build basic web pages and understand how frontend connects with backend.</p>
+      </div>
+
+      <div class="internship-card">
+        <i class="fas fa-mobile-alt internship-icon"></i>
+        <h3>PowerBi Intern</h3>
+        <div class="company">Cognifyz Technologies [Virtual]</div>
+        <div class="duration">15th Jan 2024 - 14th Jul 2024</div>
+        <p>Completed a hands-on internship focused on data analysis and visualization using Power BI. Gained experience in building interactive dashboards, transforming raw data into actionable insights, and using DAX functions for custom reporting. Collaborated on real-time business cases to support data-driven decision-making.</p>
+      </div>
+
+      <div class="internship-card">
+        <i class="fas fa-users internship-icon"></i>
+        <h3>Data Analytics Intern</h3>
+        <div class="company"> Internship Studio</div>
+        <div class="duration">July 2024</div>
+        <p> I analyzed and cleaned datasets using Python and Excel to support business decisions. I created visual reports and dashboards to highlight key insights. This role helped me develop practical skills in data analysis and effective communication.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+<section id="achievements">
+  <h2 class="section-title">My Achievements</h2>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="paper-presentation">Paper Presentation</button>
+    <button class="filter-btn" data-filter="project-presentation">Project Presentation</button>
+    <button class="filter-btn" data-filter="ideathon">Ideathon</button>
+    <button class="filter-btn" data-filter="certification">Certifications</button>
+  </div>
+
+  <div class="achievements-container">
+
+    <!-- Project Presentation Section -->
+    <div class="achievement-card project-presentation">
+      <i class="fas fa-trophy achievement-icon"></i>
+      <h3>TECHFIRM'24</h3>
+      <div class="date">23rd March 2024</div>
+      <div class="event">National-Level Technical Symposium 2024</div>
+      <p>Secured 2nd prize for presenting HEALTHGUARD, a real-time patient monitoring system using IoT sensors.</p>
+    </div>
+
+    <!-- Ideathon Section -->
+    <div class="achievement-card ideathon">
+      <i class="fas fa-trophy achievement-icon"></i>
+      <h3>IDEATHON'23</h3>
+      <div class="date">12th October 2023</div>
+      <div class="event">IDEATHON'23 By Department of ECE & IETE Forum</div>
+      <p>Won 1st prize in the Product Design domain for presenting SMARTCLIMATE, a real-time temperature and humidity monitoring system.</p>
+    </div>
+
+    <!-- Paper Presentation Section -->
+    <div class="achievement-card paper-presentation">
+      <i class="fas fa-file-alt achievement-icon"></i>
+      <h3>5th International Conference on Artificial Intelligence, 6G Communications and Network Technologies - ICA6NT 2025</h3>
+      <div class="date">27th & 28th March 2025</div>
+      <div class="event">Machine Learning for Agricultural Applications</div>
+      <p>Participated and presented a paper titled Smart Agro Advisory System, which proposes a technology-driven solution to support farmers with real-time crop recommendations, weather-based alerts, and soil health insights to improve agricultural productivity.</p>
+    </div>
+
+    <div class="achievement-card paper-presentation">
+      <i class="fas fa-file-alt achievement-icon"></i>
+      <h3>National Level Techno Symposium</h3>
+      <div class="date">17th February 2024</div>
+      <div class="event">Internet Of Things for Poultry Farms</div>
+      <p>Presented a paper on implementing IoT technologies in poultry farms for real-time monitoring of environmental conditions, feed management, and animal health tracking. The proposed system includes sensor networks, automated data collection, and an intelligent dashboard that provides farmers with actionable insights to optimize productivity, reduce mortality rates, and improve overall farm efficiency while maintaining animal welfare standards.</p>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="achievement-card certification">
+      <i class="fas fa-certificate achievement-icon"></i>
+      <h3>Python Certification</h3>
+      <div class="date">April 2024</div>
+      <div class="event">ITS-303 Python Certification Exam</div>
+      <p>Passed the ITS-303 Python Certification Exam (formerly Microsoft MTA 98-381) on April 22, 2024, with a score of 840/1000, demonstrating proficiency in Python programming concepts.</p>
+    </div>
+    <div class="achievement-card certification">
+      <i class="fas fa-certificate achievement-icon"></i>
+      <h3>Data Analytics And visualization Certification</h3>
+      <div class="date">Jume 2024</div>
+      <div class="event">Linux Complete Course – Udemy</div>
+      <p>Completed a hands-on Linux course on Udemy covering command-line usage, file system navigation, and shell scripting. Gained practical knowledge in user management, permissions, and basic system administration. Strengthened my ability to work efficiently in Linux environments.</p>
+    </div>
+    <div class="achievement-card certification">
+      <i class="fas fa-certificate achievement-icon"></i>
+      <h3>Linux Certification</h3>
+      <div class="date">May 2025</div>
+      <div class="event">Linux Complete Course – Udemy</div>
+      <p>Completed a hands-on Linux course on Udemy covering command-line usage, file system navigation, and shell scripting. Gained practical knowledge in user management, permissions, and basic system administration. Strengthened my ability to work efficiently in Linux environments.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Kovilpatti,Tamilnadu,India</p>
+        <p><i class="fas fa-phone"></i> 8807221081</p>
+        <p><i class="fas fa-envelope"></i> muthuchitrau31@gmail.com</p>
+        
+        <div class="social-links">
+          <a href="https://wa.me/8072744267" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <form id="contactForm">
+         <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Muthu Chitra U.S. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Close mobile menu if open
+        document.getElementById('navMenu').classList.remove('active');
+        
+        // Scroll to section
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Update active link
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const achievementCards = document.querySelectorAll('.achievement-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      achievementCards.forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', function() {
+      let scrollPosition = window.scrollY;
+      
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+          document.querySelector('nav a[href="#' + sectionId + '"]').classList.add('active');
+        }
+      });
+    });
+
+    // Typing effect for home section
+    const typedTextElement = document.getElementById('typed-text');
+    const textArray = ["Exploring Data ", "Data Enthusiast", "Analytical Thinker"
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingDelay = 100;
+
+    function typeText() {
+      const currentText = textArray[textIndex];
+      
+      if (isDeleting) {
+        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typingDelay = 50;
+      } else {
+        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 150;
+      }
+      
+      if (!isDeleting && charIndex === currentText.length) {
+        // Pause at end of typing
+        isDeleting = true;
+        typingDelay = 1500;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % textArray.length;
+        typingDelay = 500;
+      }
+      
+      setTimeout(typeText, typingDelay);
+    }
+
+    // Start typing effect when page loads
+    window.addEventListener('load', typeText);
+
+    // Filter for achievements section
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        
+        document.querySelectorAll('.achievement-card').forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const name = this.elements.name.value;
+      const email = this.elements.email.value;
+      const subject = this.elements.subject.value;
+      const message = this.elements.message.value;
+      
+      // You can add form submission logic here
+      // For example, sending data to a server
+      
+      // Show success message (simple alert for now)
+      alert('Thank you for your message, ' + name + '! I will get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
